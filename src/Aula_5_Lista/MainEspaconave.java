@@ -12,7 +12,7 @@ public class MainEspaconave {
         
         nave.removeArma("Arma X");
         
-        nave.atira("Arma Y");
+        nave.atiraTodas();
         
     }
 }
