@@ -78,6 +78,12 @@ public class Main {
                             break;
                         }
                     }
+
+                    if (disciplinaAluno == null) {
+                        JOptionPane.showMessageDialog(null, "Disciplina não foi encontrada.");
+                        continue;
+                    }
+                    
                     Aluno aluTmp = new Aluno(nome, cpf, ra, disciplinaAluno);
                     
                     lstPessoas.add(aluTmp);
@@ -166,9 +172,7 @@ public class Main {
        String str = "";
         for (Pessoa pessoa : lstPessoas) {
             if (tipoDaClasse.isInstance(pessoa)) {
-                T funcionario = tipoDaClasse.cast(pessoa);
-
-                Funcionario func = (Funcionario) funcionario;
+                Funcionario func = (Funcionario) pessoa;
                 str += "[" + func.getNumeroCracha() + "] - " + func.getNome() + "\n";
   
             }
