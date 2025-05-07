@@ -43,6 +43,7 @@ public class Disciplina {
         alunos.remove(aluno);
     }
     
+    @Override
     public String toString() {
         String str = "";
         for (Aluno aluno : alunos){
